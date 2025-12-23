@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+
+<h2>HTML Forms</h2>
+
+<form name="AssosForm" action="/action_page.php" method="post" autocomplete="on">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br>
+  <label for="email">Email adress:</label><br>
+  <input type="email" id="email" name="email" value="example@example.com"><br>
+  <label for="phone">Phone number:</label><br>
+  <input type="tel" id="phone" name="phone" size="10" pattern="[0-9]{10}"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+</body></html>
