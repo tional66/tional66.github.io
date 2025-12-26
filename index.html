@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+<html>
 
-<h2>Formulaire</h2>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script src="apercu_modele.js" defer></script>
+</head>
 
-<form name="AssosForm" action="/action_page.php" method="post" autocomplete="on">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br>
-  <label for="email">Email adress:</label><br>
-  <input type="email" id="email" name="email" value="example@example.com"><br>
-  <label for="phone">Phone number:</label><br>
-  <input type="tel" id="phone" name="phone" size="10" pattern="[0-9]{10}" value="0123456789"><br><br>
+<body>
+
+<h2>Formulaire de création des statuts de l'association :</h2>
+
+<form name="AssosForm" action="apercu_modele.js" method="post" autocomplete="on">
+  <label for="titre_association">Nom de l'association :</label><br>
+  <input type="text" id="titre_association" name="titre_association"><br>
+  <label for="objet_association">Objet de l'association :</label><br>
+  <textarea id="objet_association" name="objet_association" rows="10" cols="30">Objet de l'association</textarea><br>
+  <label for="adresse_siege_social">Adresse du siège social :</label><br>
+  <input type="email" id="adresse_siege_social" name="adresse_siege_social" value="1 rue de l'Exemple, 01230 EXEMPLE"><br>
+  <label for="duree_vie">Durée de vie de l'association en années :</label><br>
+  <input type="number" id="duree_vie" name="duree_vie" size="2" pattern="[0-9]{2}" value="99"><br><br>
   <input type="submit" value="Submit">
 </form> 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "apercu_modele.js".</p>
 
 
-</body></html>
+<h2>Modèle de statuts de l'association :</h2>
+
+<p>
+  L'association se nomme <strong><span data-placeholder="titre_association">[Nom de l'association]</span></strong>,
+  son objet est <strong><span data-placeholder="objet_association">[Objet de l'association]</span></strong>,
+  son siège social est situé <strong><span data-placeholder="adresse_siege_social">[Adresse du siège social]</span></strong>.
+</p>
+
+</body>
+</html>
